@@ -1,6 +1,10 @@
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import facebook from "@/assets/fb.png";
+import twitter from "@/assets/twitter.png";
+import instagram from "@/assets/instagram.png";
+import Image from 'next/image';
 
 const RightSidebar = () => {
     return (
@@ -15,6 +19,26 @@ const RightSidebar = () => {
                     <FaGithub />
                     Login with Github
                 </button>
+            </div>
+            <div>
+                <h2 className="text-lg font-bold">Find Us On</h2>
+                <div className="space-y-4 mt-6">
+                    <button className="border p-2 w-full flex gap-2 items-center">
+                        <Image
+                            src={facebook}
+                            alt="Facebook"
+                        />
+                        Facebook
+                    </button>
+                    <button className="border p-2 w-full flex gap-2 items-center">
+                        <Image src={twitter} alt="Twitter" />
+                        Twitter
+                    </button>
+                    <button className="border p-2 w-full flex gap-2 items-center">
+                        <Image src={instagram} alt="Instagram" />
+                        Instagram
+                    </button>
+                </div>
             </div>
         </div>
     );
